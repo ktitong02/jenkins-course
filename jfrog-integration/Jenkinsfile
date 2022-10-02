@@ -22,8 +22,10 @@ node {
             
      
             print buildInfo
-          
-            rtGradle.run rootDir: "artifactory/", tasks: 'clean artifactoryPublish', buildInfo: buildInfo
+             print server
+             print rtGradle
+         
+             print buildInfortGradle.run rootDir: "artifactory/", tasks: 'clean artifactoryPublish', buildInfo: buildInfo
             
         }
         stage('Publish build info') {
