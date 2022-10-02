@@ -19,8 +19,9 @@ node {
             rtGradle.usesPlugin = true // Artifactory plugin already defined in build script
         }
         stage('Exec Gradle') {
+            print "WTF AYAWE GUMAWA!"
             rtGradle.run rootDir: "artifactory/", tasks: 'clean artifactoryPublish', buildInfo: buildInfo
-            print rootDir
+            
         }
         stage('Publish build info') {
             server.publishBuildInfo buildInfo
