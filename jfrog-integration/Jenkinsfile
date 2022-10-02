@@ -20,6 +20,7 @@ node {
         }
         stage('Exec Gradle') {
             rtGradle.run rootDir: "artifactory/", tasks: 'clean artifactoryPublish', buildInfo: buildInfo
+            print rootDir
         }
         stage('Publish build info') {
             server.publishBuildInfo buildInfo
