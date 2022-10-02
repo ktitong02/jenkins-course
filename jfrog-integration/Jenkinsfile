@@ -20,7 +20,7 @@ node {
         }
         stage('Exec Gradle') {
             print "WTF AYAWE GUMAWA!"
-            print rootDir
+            print rtGradle.run
             rtGradle.run rootDir: "artifactory/", tasks: 'clean artifactoryPublish', buildInfo: buildInfo
             
         }
