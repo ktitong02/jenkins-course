@@ -20,7 +20,7 @@ node {
         }
         stage('Exec Gradle') {
             
-            def buildInfo = rtGradle.run rootDir: "projectDir/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+     
             print buildInfo
           
             rtGradle.run rootDir: "artifactory/", tasks: 'clean artifactoryPublish', buildInfo: buildInfo
